@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="page.wrapper">
+            <container name="full-columns" htmlTag="div" htmlClass="full-columns" after="main.content" before="footer">
+                <container name="full-main" label="Custom Main Content Container" htmlTag="div" htmlClass="column main"/>
+            </container>
+        </referenceContainer>
+
+        <referenceContainer name="full-main">
+            <container name="services" label="Services Content Container" htmlTag="div" htmlClass="services-container-block">
+                <block class="Magento\Framework\View\Element\Template" name="pronko.content.services" template="Magento_Cms::services.phtml" />
+            </container>
+            <container name="extensions" label="extensions Content Container" htmlTag="div" htmlClass="extensions-container-block">
+                <block class="Magento\Framework\View\Element\Template" name="pronko.content.extensions" template="Magento_Cms::extensions.phtml" />
+            </container>
+            <container name="blog" label="Blog Content Container" htmlTag="div" htmlClass="blog-container-block">
+                <block class="Magento\Framework\View\Element\Template" name="pronko.content.blog" template="Magento_Cms::blog.phtml" />
+            </container>
+            <container name="newsletter" label="Newsletter Content Container" htmlTag="div" htmlClass="newsletter-block" />
+            <container name="contact" label="Contact Content Container" htmlTag="div" htmlClass="contact-block" />
+        </referenceContainer>
+    </body>
+</page>
